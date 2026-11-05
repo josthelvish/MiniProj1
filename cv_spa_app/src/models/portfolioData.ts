@@ -3,6 +3,15 @@
  */
 import type { PortfolioData } from './types'
 
+// Ícones de competências em imagem
+import androidIcon from '@/assets/icons/android-os.png'
+
+import bookImage from '@/assets/images/hobbies/book.jpg'
+import sportsImage from '@/assets/images/hobbies/sports.jpg'
+import cinemaImage from '@/assets/images/hobbies/cinema.jpg'
+import meImage from '@/assets/images/personal/me.png'
+import familyImage from '@/assets/images/personal/family.jpg'
+
 const bioLead =
   'Chamo-me José, sou licenciado em Engenharia Informática e estou sempre disposto a abraçar projetos de inovação/transformação digital.'
 
@@ -28,11 +37,11 @@ export const portfolioData: PortfolioData = {
     name: 'José Silva',
     initials: 'JS',
     eyebrow: 'Portfólio / CV',
-    role: 'Desenvolvedor Front-end & UI',
+    role: 'Desenvolvedor Mobile & Web',
     tagline:
       'Transformo ideias em experiências digitais simples, acessíveis e úteis. Entre código e design, procuro sempre o lado humano da tecnologia.',
     meta: ['Porto, Portugal', 'Disponível para colaborar'],
-    photo: { label: 'Fotografia', alt: 'Fotografia de José Silva' },
+    photo: { src: meImage, label: 'Fotografia', alt: 'Fotografia de José Silva' },
   },
 
   about: {
@@ -57,11 +66,12 @@ export const portfolioData: PortfolioData = {
       eyebrow: 'Sobre mim / Biografia',
       title: 'Quem sou eu?',
       image: {
+        src: familyImage,
         label: 'Foto · José Silva · Porto, Portugal',
         alt: 'Fotografia de José Silva no Porto',
       },
       heading: 'O meu percurso, os meus valores e o que me move',
-      paragraphs: [bioLead, bioParagraph],
+      paragraphs: ['Tudo isto acontece e é possível graças à minha familía.', 'É este o grande pilar de todos os meus outros valores, o garante que me permite viver segundo eles. E é também graças a ela que me posso dedicar às minhas outras duas paixões, o trabalho e a aprendizagem constante.'],
       highlights: qualifications,
       closeLabel: 'Fechar',
     },
@@ -85,6 +95,7 @@ export const portfolioData: PortfolioData = {
       {
         id: 'sk-android',
         glyph: '▦',
+        iconSrc: androidIcon,
         title: 'Desenvolvimento Mobile Android',
         description:
           'Arquitetura de aplicações mobile',
@@ -105,39 +116,52 @@ export const portfolioData: PortfolioData = {
     heading: {
       eyebrow: '03 / Fora do ecrã',
       title: 'Hobbies',
-      subtitle: 'Tento sempre encontrar formas de me rejuvenercer, explorar, aprender e criar.',
+      subtitle: 'Tento sempre encontrar formas de me rejuvenescer, explorar, aprender e criar.',
     },
     items: [
       {
         id: 'hb-reading',
-        image: { label: 'Imagem · Leitura de livros' },
-        kicker: 'Olhar com atenção',
-        title: 'Fotografia',
+        image: {
+          label: 'Imagem · Leitura de livros',
+          src: bookImage,
+          alt: 'Livraria com estantes e mesas cheias de livros, a preto e branco',
+        },
+        kicker: 'Perder-me e encontrar-me no meio de parágrafos',
+        title: 'Literatura',
         description:
           'Adoro ler. Procuro sempre leituras que me ajudem a saciar a minha eterna busca pelo conhecimento, mas entre os livros de história e técnicos procuro sempre conhecer um bom romance.',
       },
       {
         id: 'hb-sports',
-        image: { label: 'Imagem · Saude, desporto e bem estar' },
+        image: {
+          label: 'Imagem · Saúde, desporto e bem estar',
+          src: sportsImage,
+          alt: 'Ciclista de BTT parado num trilho de terra no meio do bosque, a preto e branco',
+          position: 'center 10%',
+        },
         kicker: 'Desligar para recarregar',
         title: 'Desporto',
         description:
-          'Pratico diversos tipos de desporto (ginásio, futebol, btt, padel...), casualmente e sempre com o foco na minha saude e bem estar pessoal.',
+          'Pratico diversos tipos de desporto (ginásio, futebol, btt, padel...), casualmente e sempre com o foco na saúde e bem-estar pessoal.',
       },
       {
         id: 'hb-cinema',
-        image: { label: 'Imagem · Música e guitarra' },
-        kicker: 'Criatividade sem ecrã',
+        image: {
+          label: 'Imagem · Cinema',
+          src: cinemaImage,
+          alt: 'Ilustração de um projetor de cinema antigo com bobinas e película',
+        },
+        kicker: 'A 7ª arte',
         title: 'Cinema',
         description:
-          'Algures entre os monitores, e os cada vez menos espaços vazios, procuro sempre encontrar tempo para um bom filme, qualque género, importa é o argumento ou uma interpretação de excelência.',
+          'Algures entre os monitores, e os cada vez menos espaços vazios, procuro encontrar tempo para um bom filme, não importa o género desde que a interpretação ou o argumento sejam de excelência.',
       },
     ],
   },
 
   footer: {
     copyright: '© 2026 José Silva.',
-    note: 'Feito com curiosidade e atenção ao detalhe.',
+    note: 'Semper discens',
     socialTitle: 'Redes sociais',
     socials: [
       { id: 'linkedin', short: 'in', label: 'LinkedIn', url: 'https://www.linkedin.com/in/jose-rsilva/' },

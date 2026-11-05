@@ -20,6 +20,8 @@ export interface ImageAsset {
   label: string
   src?: string
   alt?: string
+  /** Enquadramento no recorte (CSS `object-position`), ex.: 'center 30%'. */
+  position?: string
 }
 
 export interface Profile {
@@ -63,7 +65,10 @@ export interface AboutData {
 
 export interface SkillCard {
   id: string
+  /** Glifo de texto mostrado na caixa do ícone (ex.: "</>") — usado quando não há `iconSrc`. */
   glyph: string
+  /** Imagem de ícone opcional (importada de src/assets/icons); substitui o glifo. */
+  iconSrc?: string
   title: string
   description: string
   tags: string[]
@@ -89,11 +94,9 @@ export interface HobbiesData {
 
 export interface SocialLink {
   id: string
-  /** Texto curto mostrado no botão (ex.: "in") — usado quando não há `icon`. */
   short: string
   label: string
   url: string
-  /** Ícone SVG opcional; quando definido, substitui o texto curto. */
   icon?: IconName
 }
 

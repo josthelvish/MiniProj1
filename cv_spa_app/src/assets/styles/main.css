@@ -64,6 +64,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Bloqueio de scroll (menu mobile / modal) */
 body.overflow-hidden {
   overflow: hidden;
   padding-right: var(--scrollbar-compensation, 0);
@@ -149,5 +150,71 @@ section:focus {
   .cards-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0 1.2rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition:
+    background-color var(--transition),
+    border-color var(--transition);
+}
+
+.btn--outline {
+  border: 1px solid var(--color-icon);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.btn--outline:hover {
+  background: var(--color-bg-alt);
+  border-color: var(--color-text);
+}
+
+/* Acessibilidade */
+.skip-link {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: calc(var(--z-modal) + 1);
+  padding: 0.6rem 1rem;
+  background: var(--color-text);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  transform: translateY(-200%);
+  transition: transform var(--transition);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
