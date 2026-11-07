@@ -7,7 +7,6 @@ const props = withDefaults(
     name: IconName
     size?: number
     strokeWidth?: number
-    /** Texto alternativo; se omitido, o ícone é decorativo. */
     label?: string
   }>(),
   { size: 20, strokeWidth: 2, label: undefined },

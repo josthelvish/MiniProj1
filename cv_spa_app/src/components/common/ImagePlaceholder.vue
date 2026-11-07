@@ -26,7 +26,11 @@ withDefaults(
       decoding="async"
     />
     <template v-else>
-      <AppIcon :name="icon" :size="shape === 'circle' ? 80 : 32" :stroke-width="shape === 'circle' ? 1 : 1.25" />
+      <AppIcon
+        :name="icon"
+        :size="shape === 'circle' ? 80 : 32"
+        :stroke-width="shape === 'circle' ? 1 : 1.25"
+      />
       <figcaption class="placeholder__label">{{ image.label }}</figcaption>
     </template>
   </figure>

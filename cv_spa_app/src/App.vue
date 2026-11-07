@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import { portfolioData } from '@/models/portfolioData'
 import { useNavigation } from '@/composables/useNavigation'
 import { useModal } from '@/composables/useModal'

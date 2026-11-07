@@ -56,10 +56,25 @@ export const portfolioData: PortfolioData = {
     ctaLabel: 'Saber Mais',
     timelineTitle: 'Percurso em resumo',
     timeline: [
-      { id: 'tl-1', period: '2020 — Atual', role: 'Arquiteto de Soluções Mobile', place: 'MBCP & AB · Lisboa' },
+      {
+        id: 'tl-1',
+        period: '2020 — Atual',
+        role: 'Arquiteto de Soluções Mobile',
+        place: 'MBCP & AB · Lisboa',
+      },
       { id: 'tl-1', period: '2018 — 2020', role: 'Head of quality', place: 'Codavel · Porto' },
-      { id: 'tl-1', period: '2013 — 2018', role: 'Software Engineer', place: 'Streambolico · Porto' },
-      { id: 'tl-2', period: '2013 — 2016', role: 'Estudante Engenharia Informática', place: 'ISEP · Porto' },
+      {
+        id: 'tl-1',
+        period: '2013 — 2018',
+        role: 'Software Engineer',
+        place: 'Streambolico · Porto',
+      },
+      {
+        id: 'tl-2',
+        period: '2013 — 2016',
+        role: 'Estudante Engenharia Informática',
+        place: 'ISEP · Porto',
+      },
     ],
     modal: {
       id: 'modal-bio',
@@ -71,7 +86,10 @@ export const portfolioData: PortfolioData = {
         alt: 'Fotografia de José Silva no Porto',
       },
       heading: 'O meu percurso, os meus valores e o que me move',
-      paragraphs: ['Tudo isto acontece e é possível graças à minha familía.', 'É este o grande pilar de todos os meus outros valores, o garante que me permite viver segundo eles. E é também graças a ela que me posso dedicar às minhas outras duas paixões, o trabalho e a aprendizagem constante.'],
+      paragraphs: [
+        'Tudo isto acontece e é possível graças à minha familía.',
+        'É este o grande pilar de todos os meus outros valores, o garante que me permite viver segundo eles. E é também graças a ela que me posso dedicar às minhas outras duas paixões, o trabalho e a aprendizagem constante.',
+      ],
       highlights: qualifications,
       closeLabel: 'Fechar',
     },
@@ -97,8 +115,7 @@ export const portfolioData: PortfolioData = {
         glyph: '▦',
         iconSrc: androidIcon,
         title: 'Desenvolvimento Mobile Android',
-        description:
-          'Arquitetura de aplicações mobile',
+        description: 'Arquitetura de aplicações mobile',
         tags: ['Android', 'Clean Architecture', 'Mobile Security', 'MVVM'],
       },
       {
@@ -164,7 +181,12 @@ export const portfolioData: PortfolioData = {
     note: 'Semper discens',
     socialTitle: 'Redes sociais',
     socials: [
-      { id: 'linkedin', short: 'in', label: 'LinkedIn', url: 'https://www.linkedin.com/in/jose-rsilva/' },
+      {
+        id: 'linkedin',
+        short: 'in',
+        label: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/jose-rsilva/',
+      },
       { id: 'github', short: 'GH', label: 'GitHub', url: 'https://github.com/josthelvish' },
       {
         id: 'whatsapp',

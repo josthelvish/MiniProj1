@@ -51,7 +51,7 @@ const emit = defineEmits<{
         aria-controls="mobile-menu"
         @click="emit('toggleMenu')"
       >
-        <AppIcon :name="isMenuOpen ? 'x' : 'menu'" :size="20" :stroke-width="1.5" />
+        <AppIcon :name="isMenuOpen ? 'close' : 'menu'" :size="20" :stroke-width="1.5" />
       </button>
     </div>
   </header>
